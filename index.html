@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Downloader - TikTok, Instagram, Twitter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-download"></i> Video Downloader</h1>
+            <p>Download video dari TikTok, Instagram, Twitter, YouTube</p>
+        </header>
+
+        <main>
+            <div class="download-section">
+                <div class="input-group">
+                    <input type="text" id="videoUrl" placeholder="Tempel link video di sini..." autocomplete="off">
+                    <button id="downloadBtn">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                </div>
+                
+                <div class="platform-icons">
+                    <div class="platform-icon" data-platform="tiktok">
+                        <i class="fab fa-tiktok"></i>
+                        <span>TikTok</span>
+                    </div>
+                    <div class="platform-icon" data-platform="instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </div>
+                    <div class="platform-icon" data-platform="twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </div>
+                    <div class="platform-icon" data-platform="youtube">
+                        <i class="fab fa-youtube"></i>
+                        <span>YouTube</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="result" class="result-section hidden">
+                <div class="video-preview">
+                    <div class="thumbnail-container">
+                        <img id="videoThumbnail" src="" alt="Video Thumbnail">
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3 id="videoTitle">Video Title</h3>
+                        <div class="video-meta">
+                            <span id="videoDuration"><i class="fas fa-clock"></i> 0:00</span>
+                            <span id="videoPlatform"><i class="fas fa-globe"></i> Platform</span>
+                            <span id="videoAuthor"><i class="fas fa-user"></i> Author</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="download-options">
+                    <h4>Pilihan Download:</h4>
+                    <div id="qualityOptions" class="quality-options">
+                        <!-- Quality options will be generated here -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Memproses video...</p>
+            </div>
+
+            <div id="error" class="error hidden">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p id="errorMessage">Terjadi kesalahan</p>
+            </div>
+        </main>
+
+        <footer>
+            <p><i class="fas fa-info-circle"></i> Gunakan untuk konten publik dan keperluan pribadi</p>
+            <p>&copy; 2024 Video Downloader</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
